@@ -1,0 +1,37 @@
+import React, { useState, useRef, useEffect } from "react";
+import { NextPage } from 'next'
+import Head from 'next/head'
+import { useRouter } from 'next/router';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+
+type LayoutProps = {
+	children: React.ReactNode
+}
+
+const Layout = ({ children }: LayoutProps) => {
+
+	const router = useRouter();
+
+	return (
+		<>
+			<Head>
+				<title>Ghost Prism</title>
+				<meta name="description" content="Ghost Prism" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/favicon.ico" />				
+				<link rel="preconnect" href="https://fonts.gstatic.com" />
+				<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+				<link href="https://fonts.googleapis.com/css?family=Chakra Petch&display=swap" rel="stylesheet" />
+			</Head>
+			<main className="bg-[#00040E]">
+				<div className="flex flex-col relative min-h-screen mx-auto">
+					<Header />
+						{children}
+					<Footer />
+				</div>
+			</main>
+		</>
+	)
+}
+export default Layout;
