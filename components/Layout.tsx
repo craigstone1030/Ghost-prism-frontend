@@ -25,7 +25,7 @@ const Layout = ({ children }: LayoutProps) => {
 				<link href="https://fonts.googleapis.com/css?family=Chakra Petch&display=swap" rel="stylesheet" />
 			</Head>
 			<main className="bg-[#00040E]">
-				<div className="flex flex-col relative min-h-screen mx-auto">
+				<div className="flex flex-col relative min-h-screen mx-auto px-2 md:px-0">
 					<Header />
 						{children}
 					<Footer />

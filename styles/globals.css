@@ -109,3 +109,25 @@ a {
     color-scheme: dark;
   }
 }
+
+.nft-gradient {
+  background: linear-gradient(180deg, #C4E2FE 0%, #7FB5FF 100%), #606060;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-family: Orbitron
+}
+
+.dlc-gradient {
+  background: linear-gradient(180deg, #E8F9FD 0%, #FEE2C5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-family: Orbitron
+}
+
+.btn-outline-gradient {
+  background: linear-gradient(180deg, #C4E2FE 0%, #7FB5FF 100%)
+}

@@ -1,6 +1,5 @@
 import Logo from '@/components/home/logo';
 import BaseContainer from '@/components/BaseContainer';
-import GradientText from './GradientText';
 
 type ButtonLayoutProps = {
 	title: string,
@@ -11,12 +10,12 @@ const Footer = () => {
 
 	const ButtonLayout = ({ title, children }: ButtonLayoutProps) => {
 		return (
-			<div className='flex items-center justify-between bg-[#080B13] rounded-[40px] px-8 text-[#C4E2FE] tracking-widest space-x-16'>
-				<div className="flex items-center justify-center text-xs font-chakraPetch opacity-40">
+			<div className='flex items-center justify-center md:justify-between bg-[#080B13] rounded-[40px] px-2 md:px-8 text-[#C4E2FE] tracking-widest space-x-6 md:space-x-16'>
+				<div className="hidden md:flex items-center justify-center text-xs font-chakraPetch opacity-40">
 					<p>/</p>
 					<p className="ml-1">{title}</p>
 				</div>
-				<div className="flex space-x-6">
+				<div className="flex flex-wrap justify-center md:justify-between space-x-5 md:space-x-6">
 					{children}
 				</div>
 			</div>
@@ -40,15 +39,7 @@ const Footer = () => {
 
 	return (
 		<BaseContainer>
-			<div className="flex flex-row justify-between">
-				<div className="flex flex-col flex-grow justify-between items-start">
-					<Logo />
-					<GradientText from="C4E2FE" to="7FB5FF"  text="Market With Quality 3D assets / NFT / DLC" sx="text-2xl md:max-w-[240px]" />
-					<div className="text-[#C4E2FE] text-xs font-chakraPetch">
-						<p>@ Ghost Prism.</p>
-						<p>All right reserved.</p>
-					</div>
-				</div>
+			<div className="flex flex-col md:flex-row-reverse justify-between mt-32 md:mt-[320px] mb-10">
 				<div className="ml-3 space-y-6">
 					<ButtonLayout title="Navigation">
 						<ArrowText text="Marketplace" link="marketplace" />
@@ -69,6 +60,17 @@ const Footer = () => {
 						<ArrowText text="Terms & Conditions" link="terms" />
 					</ButtonLayout>
 				</div>
+				<div className="flex flex-col flex-grow justify-center md:justify-between items-center md:items-start mt-10 md:mt-0 ">
+					<Logo />
+					<p className="text-2xl font-orbitron nft-gradient md:max-w-[240px] text-center md:text-left mt-8 md:mt-0">
+						Market With Quality 3D assets / NFT / DLC
+					</p>
+					<div className="text-[#C4E2FE] text-xs font-chakraPetch mt-8 md:mt-0">
+						<p>@ Ghost Prism.</p>
+						<p>All right reserved.</p>
+					</div>
+				</div>
+
 			</div>
 		</BaseContainer>
 	)

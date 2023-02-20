@@ -9,12 +9,16 @@ import Layout from '@/components/Layout'
 export default function Home() {
   return (
     <Layout>
-      <HeroSection />
-      <ModelSection />
+      <div className="bg-[url('/images/gradientbg2.png')]">
+        <HeroSection />
+        <ModelSection />
+      </div>
       <PromptSection />
       <MarketplaceSection />
-      <FaqSection />
-      <SocialSection />
+      <div className="bg-[url('/images/gradientbg1.png')] bg-bottom bg-no-repeat">
+        <FaqSection />
+        <SocialSection />
+      </div>
     </Layout>
   )
 }
