@@ -66,7 +66,7 @@ const Footer = () => {
 						Market With Quality 3D assets / NFT / DLC
 					</p>
 					<div className="text-[#C4E2FE] text-xs font-chakraPetch mt-8 md:mt-0">
-						<p>@ Ghost Prism.</p>
+						<p>@ Ghost Prisms.</p>
 						<p>All right reserved.</p>
 					</div>
 				</div>
