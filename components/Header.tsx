@@ -56,7 +56,7 @@ const Header = () => {
 							</div>
 							<div className="w-full">
 								<h1 className="font-chakraPetch text-xs">Wallet:</h1>
-								<h1 className="font-chakraPetch text-xs uppercase">Connected:</h1>
+								<h1 className="font-chakraPetch text-xs font-semibold uppercase">Connected</h1>
 							</div>
 						</div>
 					</div>
