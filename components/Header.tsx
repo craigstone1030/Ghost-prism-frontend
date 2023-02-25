@@ -55,8 +55,8 @@ const Header = () => {
 								<div className="absolute z-10 -top-[1px] -left-[1px] rounded-full bg-gradient-to-b from-[#FEE2C5]/[.32] to-[#FEE2C5]/[.01]" style={{ width: "calc(100% + 2px)", height: "calc(100% + 2px)"}}></div>
 							</div>
 							<div className="w-full">
-								<h1 className="font-chakraPetch text-xs">Wallet:</h1>
-								<h1 className="font-chakraPetch text-xs font-semibold uppercase">Connected</h1>
+								<h1 className="font-chakraPetch text-xs tracking-widest">Wallet:</h1>
+								<h1 className="font-chakraPetch text-xs tracking-widest font-semibold uppercase">Connected</h1>
 							</div>
 						</div>
 					</div>
