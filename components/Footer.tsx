@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Logo from '@/components/home/logo';
 import BaseContainer from '@/components/BaseContainer';
 
@@ -24,7 +25,7 @@ const Footer = () => {
 
 	const ArrowText = (props: { text: string, link: string }) => {
 		return (
-			<a href={props.link}>
+			<Link href={props.link}>
 				<div className="flex items-center space-x-1 py-8">
 					<h1 className="font-chakraPetch text-xs uppercase">
 						{props.text}
@@ -33,7 +34,7 @@ const Footer = () => {
 						<path fillRule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
 					</svg>
 				</div>
-			</a>
+			</Link>
 		)
 	}
 

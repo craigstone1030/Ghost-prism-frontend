@@ -15,7 +15,7 @@ const Header = () => {
 						<div className="hidden justify-between rounded-[40px] bg-[#0F1421] px-8 py-2 md:flex">
 							<div className="flex items-center text-[#7FB5FF] space-x-1">
 								<h1 className="font-chakraPetch uppercase">
-									<a href="/marketplace">Marketplace</a>
+									<Link href="/marketplace">Marketplace</Link>
 								</h1>
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-up-right" viewBox="0 0 16 16">
 									<path fillRule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
@@ -24,7 +24,7 @@ const Header = () => {
 							<div className="mx-5 text-[#7FB5FF] opacity-[0.2] rotate-[17deg]">/</div>
 							<div className="flex items-center space-x-1 text-[#FEE2C5]">
 								<h1 className="font-chakraPetch uppercase">
-									<a href="/crafting">Crafting</a>
+									<Link href="/crafting">Crafting</Link>
 								</h1>
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-up-right" viewBox="0 0 16 16">
 									<path fillRule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />

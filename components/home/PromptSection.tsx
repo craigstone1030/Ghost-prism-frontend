@@ -1,11 +1,12 @@
 
+import Link from 'next/link';
 import BaseContainer from '@/components/BaseContainer';
 
 const PromptSection = () => {
 
 	const ButtonLayout = (props: { text: string, link: string, active: boolean }) => {
 		return (
-			<a href={props.link}>
+			<Link href={props.link}>
 				<div className="flex items-center justify-center text-3xl font-orbitron text-[#7FB5FF] bg-[#0F1421] rounded-[40px] w-[180px] md:w-[240px] h-[60px] space-x-3">
 					{
 						props.active ? (
@@ -24,7 +25,7 @@ const PromptSection = () => {
 						)
 					}
 				</div>
-			</a>
+			</Link>
 		)
 	}
 
