@@ -105,13 +105,13 @@ export default function NftDetail() {
                 </svg>
               </div>
               <p className='text-xs text-[#C4E2FE] opacity-80 mt-6'>
-                Mila Lolli's 'Creature House' is a playable 3D metaverse asset that is derived from 
-                the original 'Creatures of the Night' collection that she created in 2021. 
+                Mila Lolli&apos;s &apos;Creature House&apos; is a playable 3D metaverse asset that is derived from 
+                the original &apos;Creatures of the Night&apos; collection that she created in 2021. 
                 The collection is inspired by the American rock band Kiss, and their playful 
-                identities and face paints. Each individual piece within the 'Creatures of the Night' 
-                collection was audio reactive, and following that collection, the 'Creature House' 
+                identities and face paints. Each individual piece within the &apos;Creatures of the Night&apos; 
+                collection was audio reactive, and following that collection, the &apos;Creature House&apos; 
                 was created. It challenges traditional architecture through its incorporation of 
-                characteristics of wild nocturnal animal faces. Mila's intention behind the 'Creature House' 
+                characteristics of wild nocturnal animal faces. Mila&apos;s intention behind the &apos;Creature House&apos; 
                 is for it to be utilized as an entertainment venue by serving as a celebratory stage 
                 for musicians and performers, across the metaverse.
               </p>
