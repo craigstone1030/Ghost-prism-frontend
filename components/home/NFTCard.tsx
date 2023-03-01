@@ -14,7 +14,7 @@ type NFTCardProps = {
 export default function NFTCard(props: NFTCardProps) {
 
   return (
-    <Link href={`/nftDetail/${props.id}`}>
+    <Link href={`/${props.nft ? "nftDetail" : "dlcDetail"}/${props.id}`}>
       <div className="relative">
         <div className="flex flex-col bg-[#080B13] rounded-[40px] p-6 z-20 relative">
           <img src={`./images/${props.image}`} width="" alt="nft" />
