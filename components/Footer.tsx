@@ -10,7 +10,7 @@ const Footer = () => {
 
 	const ButtonLayout = ({ title, children }: ButtonLayoutProps) => {
 		return (
-			<div className='flex items-center justify-center md:justify-between bg-[#080B13] rounded-[40px] px-2 md:px-8 text-[#C4E2FE] tracking-widest space-x-6 md:space-x-16'>
+			<div className='flex items-center justify-center md:justify-between bg-[#080B13] rounded-[40px] px-2 md:px-8 text-[#C4E2FE] tracking-widest space-x-0 md:space-x-16'>
 				<div className="hidden md:flex items-center justify-center text-xs font-chakraPetch opacity-40">
 					<p>/</p>
 					<p className="ml-1">{title}</p>

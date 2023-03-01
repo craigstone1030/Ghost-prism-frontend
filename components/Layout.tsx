@@ -19,7 +19,7 @@ const Layout = ({ children }: LayoutProps) => {
 				<title>Ghost Prisms</title>
 				<meta name="description" content="Ghost Prisms" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/favicon.ico" />				
+				<link rel="icon" href="/favicon.ico" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
 				<link href="https://fonts.googleapis.com/css?family=Chakra Petch&display=swap" rel="stylesheet" />
@@ -27,7 +27,7 @@ const Layout = ({ children }: LayoutProps) => {
 			<main className="bg-[#00040E]">
 				<div className="flex flex-col relative min-h-screen mx-auto px-2 md:px-0">
 					<Header />
-						{children}
+					{children}
 					<Footer />
 				</div>
 			</main>

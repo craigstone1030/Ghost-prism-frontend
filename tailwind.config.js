@@ -8,7 +8,7 @@ module.exports = {
     fontFamily: {
       'orbitron': ['Orbitron'],
       'chakraPetch': ['Chakra Petch'],
-    },
+    }
   },
   plugins: [],
 }

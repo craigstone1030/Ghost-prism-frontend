@@ -1,30 +1,37 @@
+import { useRouter } from "next/router";
 import BaseContainer from '@/components/BaseContainer';
-import NFT from '@/components/home/NFT';
+import NFTCard from '@/components/home/NFTCard';
 import { useState } from 'react';
 
 const MarketplaceSection = () => {
 	const NFTs = [
 		{
+			id: "0x123sdkf34kj4kj4kjk2jk34jkqjb", 
 			image: 'nft1.png',
 			nft: true
 		},
 		{
+			id: "0x83j4j453jkhj4jtkwerlwkelrekrl", 
 			image: 'nft2.png',
 			nft: true
 		},
 		{
+			id: "0xdfeklefjkdfiueifdkifklllelee", 
 			image: 'nft3.png',
 			nft: false
 		},
 		{
+			id: "0x2k3jkjakdjkewjdkasjdkdjfkjdfk", 
 			image: 'nft4.png',
 			nft: false
 		},
 		{
+			id: "0x23k4jkjsifjksdjfiusdofjldkfls", 
 			image: 'nft5.png',
 			nft: true
 		},
 		{
+			id: "0x2k34jkjdsfijsidfjksdjfksdjfksdjf", 
 			image: 'nft6.png',
 			nft: true
 		}
@@ -65,6 +72,8 @@ const MarketplaceSection = () => {
 			name: "avatar"
 		}
 	]
+
+	const router = useRouter();
 
 	const [isFilter, setIsFilter] = useState<boolean>(false);
 
@@ -130,11 +139,11 @@ const MarketplaceSection = () => {
 
 	return (
 		<BaseContainer>
-			<div className='flex flex-col md:flex-row justify-between items-center mt-32 md:mt-[320px]'>
+			<div className={`flex flex-col md:flex-row justify-between items-center ${router.pathname === "/marketplace" ? "mt-4 md:mt-24" : "mt-32 md:mt-[320px]"}`}>
 				<p className='nft-gradient text-[45px] md:text-5xl font-orbitron uppercase'>
 					Marketplace
 				</p>
-				<div className='flex items-center space-x-7 mt-4 md:nt-0' onClick={() => setIsFilter(!isFilter)}>
+				<div className='flex items-center space-x-7 mt-4 md:nt-0 hover:cursor-pointer' onClick={() => setIsFilter(!isFilter)}>
 					<h1 className='text-[#7FB5FF] font-orbitron text-base font-semibold uppercase'>
 						filters
 					</h1>
@@ -159,14 +168,19 @@ const MarketplaceSection = () => {
 			<div className='flex flex-wrap justify-center gap-x-[20px] gap-y-20 mt-20'>
 				{
 					NFTs.map((item, index) => (
-						<NFT key={index} index={index} nft={item.nft} image={item.image} />
+						<NFTCard key={index} index={index} id={item.id} nft={item.nft} image={item.image} />
 					))
 				}
 			</div>
-			<div className='flex justify-center flex-row space-x-6 mt-20'>
-				<ButtonLayout text="Staking Info" link="staking" active={true} />
-				<ButtonLayout text="See All Assets" link="all" active={false} />
-			</div>
+			{
+				router.pathname !== "/marketplace" ? (
+					<div className='flex justify-center flex-row space-x-6 mt-20'>
+						<ButtonLayout text="Staking Info" link="staking" active={true} />
+						<ButtonLayout text="See All Assets" link="all" active={false} />
+					</div>
+				) : null
+			}
+
 		</BaseContainer>
 	)
 }
