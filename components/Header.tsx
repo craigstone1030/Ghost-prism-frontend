@@ -2,12 +2,19 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import BaseContainer from '@/components/BaseContainer';
 import Logo from '@/components/home/logo';
+import { useState } from "react";
+import LoginPopup from "@/components/home/LoginPopup";
+import LogoutPopup from "@/components/home/LogoutPopup";
+import UserWalletPopup from "@/components/home/UserWalletPopup";
 
 const Header = () => {
 	const router = useRouter();
+	const [isUserProfilePopup, setIsUserProfilePopup] = useState<boolean>(false);
+	const [isUserWalletPopup, setIsUserWalletPopup] = useState<boolean>(false);
+	const [isLoggedIn, setIsLoggeIn] = useState<boolean>(false);
 
 	return (
-		<>
+		<div className="border-0 md:border-2 border-[#0F1421]">
 			<BaseContainer>
 				<div className="flex items-center justify-between px-2 md:px-0 py-4">
 					<div className="flex items-center space-x-16">
@@ -34,26 +41,36 @@ const Header = () => {
 					</div>
 					<div className="flex space-x-4">
 						<div className="relative">
-							<div className="flex items-center justify-center relative z-20 bg-[#2b363c] rounded-full p-2 h-[40px] w-[40px]">
+							<div className="flex items-center justify-center relative z-20 bg-[#2b363c] rounded-full p-2 h-[40px] w-[40px] hover:cursor-pointer" onClick={() => setIsUserProfilePopup(!isUserProfilePopup)}>
 								<img width="16px" src="../images/user.svg" alt="wallet" />
 							</div>
-							<div className="absolute -top-[1px] -left-[1px] bg-gradient-to-b from-[#7FB5FF] to-[#000] z-10 rounded-[40px]" style={{ width: "calc(100% + 2px)", height: "calc(100% + 2px)"}}></div>
+							<div className="absolute -top-[1px] -left-[1px] bg-gradient-to-b from-[#7FB5FF] to-[#000] z-10 rounded-[40px]" style={{ width: "calc(100% + 2px)", height: "calc(100% + 2px)" }}></div>
+							{
+								isUserProfilePopup ? (
+									isLoggedIn ? <LogoutPopup setUserLogin={setIsLoggeIn} /> : <LoginPopup />
+								) : null
+							}
 						</div>
-
 						<div className="relative">
 							<div className="flex items-center justify-center relative z-20 bg-[#FEE2C5]/20 rounded-full p-2 h-[40px] w-[40px]">
 								<img width="16px" src="../images/plus.svg" alt="wallet" />
 							</div>
-							<div className="absolute z-10 -top-[1px] -left-[1px] rounded-[50%] bg-gradient-to-b from-[#FEE2C5]/[.32] to-[#FEE2C5]/[.01]" style={{ width: "calc(100% + 2px)", height: "calc(100% + 2px)"}}></div>
+							<div className="absolute z-10 -top-[1px] -left-[1px] rounded-[50%] bg-gradient-to-b from-[#FEE2C5]/[.32] to-[#FEE2C5]/[.01]" style={{ width: "calc(100% + 2px)", height: "calc(100% + 2px)" }}></div>
 						</div>
 
 						<div className="flex items-center justify-center space-x-2">
 							<div className="relative">
-								<div className="flex items-center justify-center relative z-20 bg-[#FEE2C5]/20 rounded-full p-2 h-[40px] w-[40px]">
+								<div className="flex items-center justify-center relative z-20 bg-[#FEE2C5]/20 rounded-full p-2 h-[40px] w-[40px] hover:cursor-pointer" onClick={() => setIsUserWalletPopup(!isUserWalletPopup)}>
 									<img width="16px" src="../images/wallet.svg" alt="wallet" />
 								</div>
-								<div className="absolute z-10 -top-[1px] -left-[1px] rounded-full bg-gradient-to-b from-[#FEE2C5]/[.32] to-[#FEE2C5]/[.01]" style={{ width: "calc(100% + 2px)", height: "calc(100% + 2px)"}}></div>
-							</div>
+								<div className="absolute z-10 -top-[1px] -left-[1px] rounded-full bg-gradient-to-b from-[#FEE2C5]/[.32] to-[#FEE2C5]/[.01]" style={{ width: "calc(100% + 2px)", height: "calc(100% + 2px)" }}></div>
+								<div className="absolute -top-[1px] -left-[1px] bg-gradient-to-b from-[#7FB5FF] to-[#000] z-10 rounded-[40px]" style={{ width: "calc(100% + 2px)", height: "calc(100% + 2px)" }}></div>
+									{
+										isUserWalletPopup ? (
+											<UserWalletPopup />
+										) : null
+									}
+								</div>
 							<div className="w-full">
 								<h1 className="font-chakraPetch text-xs tracking-widest">Wallet:</h1>
 								<h1 className="font-chakraPetch text-xs tracking-widest font-semibold uppercase">Connected</h1>
@@ -83,7 +100,7 @@ const Header = () => {
 					</div>
 				</div>
 			</BaseContainer>
-		</>
+		</div>
 	)
 }
 export default Header;

@@ -166,10 +166,10 @@ const MarketplaceSection = () => {
 				) : null
 			}
 
-			<div className='flex flex-wrap justify-center gap-x-[20px] gap-y-20 mt-20'>
+			<div className='flex flex-wrap justify-center gap-x-[20px] gap-y-[20px] mt-20'>
 				{
 					NFTs.map((item, index) => (
-						<NFTCard key={index} index={index} id={item.id} nft={item.nft} image={item.image} />
+						<NFTCard key={index} index={index} id={item.id} nft={item.nft} image={item.image} avartar={false} />
 					))
 				}
 			</div>
