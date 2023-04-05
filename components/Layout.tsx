@@ -19,8 +19,8 @@ const Layout = ({ children }: LayoutProps) => {
 				<title>Ghost Prisms</title>
 				<meta name="description" content="Ghost Prisms" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<meta property="og:title" content="test3 test" />
-				<meta property="og:description" content="test5 test" />
+				<meta property="og:title" content="1111111" />
+				<meta property="og:description" content="222222222" />
 				{/* <meta property="og:image" content="https://i.stack.imgur.com/8rEut.jpg" /> */}
 				<meta property="og:url" content="https://example.com/page.html" />
 				<link rel="icon" href="/favicon.ico" />
@@ -29,11 +29,11 @@ const Layout = ({ children }: LayoutProps) => {
 				<link href="https://fonts.googleapis.com/css?family=Chakra Petch&display=swap" rel="stylesheet" />
 			</Head>
 			<main className="bg-[#00040E]">
-				<div className="flex flex-col relative min-h-screen mx-auto px-2 md:px-0">
+				{/* <div className="flex flex-col relative min-h-screen mx-auto px-2 md:px-0">
 					<Header />
 					{children}
 					<Footer />
-				</div>
+				</div> */}
 			</main>
 		</>
 	)
