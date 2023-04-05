@@ -19,6 +19,10 @@ const Layout = ({ children }: LayoutProps) => {
 				<title>Ghost Prisms</title>
 				<meta name="description" content="Ghost Prisms" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta property="og:title" content="test test" />
+				<meta property="og:description" content="test test" />
+				<meta property="og:image" content="https://i.stack.imgur.com/8rEut.jpg" />
+				<meta property="og:url" content="https://example.com/page.html" />
 				<link rel="icon" href="/favicon.ico" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
