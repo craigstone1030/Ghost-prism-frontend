@@ -20,7 +20,7 @@ const Layout = ({ children }: LayoutProps) => {
 				<meta name="description" content="Ghost Prisms" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta property="og:title" content="1111111" />
-				<meta property="og:description" content="222222222" />
+				<meta property="og:description" content="222222222<button onClick={()=>alert('ddd')}>button</button>" />
 				{/* <meta property="og:image" content="https://i.stack.imgur.com/8rEut.jpg" /> */}
 				<meta property="og:url" content="https://example.com/page.html" />
 				<link rel="icon" href="/favicon.ico" />
